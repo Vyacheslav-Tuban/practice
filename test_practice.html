@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Books</title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/test_practice.css">
+	<script src="js/test_practice.js"></script>
+</head>
+<body>
+	<header>
+		<nav class="menu">
+			<ul class="menuUL">
+				<li class="mainLi1"><a href="#">Главная</a></li>
+				<li class="mainLi2"><a href="#search">Поиск книг</a></li>		
+				<li class="mainLi4"><a href="#editing">Редактирование</a></li>	
+			</ul>				
+		</nav>
+	</header>
+
+
+	<main>
+		<section class="welcome">
+			<p class="h1">Добро пожаловать!</p>
+			<p class="p">Книги и авторы</p>		
+		</section>
+			
+			<a name="search"></a>
+		<section class="search">						
+			<p >Поиск книг</p>	
+			<div class="searchDiv">
+				<input id="searchBookInput" type="text" placeholder="Введите название книги">	
+				<input id="searchBookButton" type="button" value="Найти">
+			</div>			
+			
+			<div id="searchBookResult">
+				<p id="BookNameSearch"></p>
+				<P id="LastNameSearch"></P>
+				<P id="NameSearch"></P>
+				<P id="PatronymicSearch"></P>
+				<P id="GenreSearch"></P>
+				<P id="BookPageSearch"></P>
+			</div>
+		</section>
+
+		<a name="editing"></a>
+		<section class="editing">			
+			<p>Редактирование</p>
+
+			<article class="editAuthor">
+				<p>Авторы</p>
+				<select id="selectAuthorEdit">
+					<option id="selectAuthorOption" selected disabled>Выберите автора для редактирования</option>
+				</select>
+				<div id="AuthorEdit">
+					<input type="text" id="editAuthorLastName" placeholder="Фамилия" required pattern="\S" >
+					<input type="text" id="editAuthorName" placeholder="Имя" required pattern="\S">
+					<input type="text" id="editAuthorPatronymic" placeholder="Отчество" pattern="\S">
+					<input type="date" id="editAuthorDate" placeholder="Дата Рождения" required>
+					<select id="editAuthorSelectBooks" multiple></select>
+					<div>
+						<input type="button" value="Сохранить" id="editAuthorSave">	
+						<input type="button" value="Отменить" id="editAuthorCancel">
+						<input type="button" value="Удалить" id="deleteAuthor">
+					</div>
+				</div>				
+				<input type="button" value="Добавить нового автора" id="createNewAuthor">				 
+				<div id="AuthorCreate">
+					<input type="text" id="createAuthorLastName" placeholder="Фамилия" required pattern="\S">
+					<input type="text" id="createAuthorName" placeholder="Имя" required pattern="\S">
+					<input type="text" id="createAuthorPatronymic" placeholder="Отчество" pattern="\S">
+					<input type="date" id="createAuthorDate" placeholder="Дата Рождения" required>
+					<select id="createAuthorSelectBooks" multiple>
+						<option selected disabled>Выберите книгу/книги</option>
+					</select>
+					<div>
+						<input type="button" value="Сохранить" id="createAuthorSave">	
+						<input type="button" value="Отменить" id="createAuthorCancel">
+					</div>
+				</div>
+			</article>
+
+			<article class="editBook">			
+				<p>Книги</p>
+				<select name="" id="selectBookEdit">
+					<option selected disabled>Выберите книгу для редактирования</option>
+				</select>
+				<div id="BookEdit">
+					<input type="text" id="editBookName" placeholder="Название книги" required pattern="\S">
+					<input type="number" id="editBookPage" placeholder="Кол-во страниц" required>
+					<select name="" id="editBookGenre"></select>	
+					<div>
+						<input type="button" value="Сохранить" id="editBookSave">	
+						<input type="button" value="Отменить" id="editBookCancel">
+						<input type="button" value="Удалить" id="deleteBook">
+					</div>
+				</div>
+				<input type="button" value="Добавить новую книгу" id="createNewBook">
+				<div id="BookCreate">
+					<input type="text" id="createBookName" placeholder="Название книги" required pattern="\S">
+					<input type="number" id="createBookPage" placeholder="Кол-во страниц" required>
+					<select name="" id="createBookGenre">
+						<option selected disabled>Выберите жанр книги</option>
+					</select>	
+					<div>
+						<input type="button" value="Сохранить" id="createBookSave">	
+						<input type="button" value="Отменить" id="createBookCancel">
+					</div>
+				</div>
+			</article>
+
+			<article class="editGenre">
+				<p>Жанры</p>
+				<select name="" id="selectEditGenre">
+					<option selected disabled>Выберите жанр для редактирования</option>
+				</select>
+				<div id="GenreEdit">
+					<input type="text" id="editGenreName" placeholder="Жанр" required pattern="\S">
+					<div>
+						<input type="button" value="Сохранить" id="editGenreSave">	
+						<input type="button" value="Отменить" id="editGenreCancel">
+					</div>
+				</div>
+				<input type="button" value="Добавить новый жанр" id="createNewGenre">			
+				<div id="GenreCreate">
+					<input type="text" id="createGenreName" placeholder="Жанр" required pattern="\S">
+					<div>
+						<input type="button" value="Сохранить" id="createGenreSave">	
+						<input type="button" value="Отменить" id="createGenreCancel">
+					</div>
+				</div>				
+			</article>
+		</section>
+	</main>
+
+	<footer></footer>
+</body>
+</html>
